@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Mc Owino — Digital Architect</title>
+
+<meta name="description" content="Mc Owino — High-end Web Developer & Digital Architect crafting elegant digital experiences.">
+<meta name="author" content="Mc Owino">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0b0b0e;
+  --card:#121217;
+  --muted:#a1a1aa;
+  --accent:#c9a45c;
+  --white:#f4f4f5;
+}
+
+body.light{
+  --bg:#f7f7f9;
+  --card:#ffffff;
+  --muted:#555;
+  --accent:#8b6f3d;
+  --white:#0b0b0e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  line-height:1.7;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:22px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(11,11,14,.6);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+  transition:.3s;
+}
+
+.navbar.shrink{
+  padding:14px 10%;
+  background:rgba(11,11,14,.85);
+}
+
+.navbar h1{
+  font-size:1.5rem;
+  font-weight:600;
+  letter-spacing:1px;
+  /*text-transform:uppercase;*/
+}
+
+/* NAV LINKS */
+.nav-links{
+  display:flex;
+  align-items:center;
+}
+
+.nav-links a{
+  color:var(--muted);
+  margin-left:30px;
+  text-decoration:none;
+  font-size:.95rem;
+}
+
+.nav-links a:hover{
+  color:var(--white);
+}
+
+/* THEME TOGGLE */
+.theme-toggle{
+  background:none;
+  border:none;
+  color:var(--white);
+  font-size:1rem;
+  cursor:pointer;
+  margin-left:25px;
+}
+
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:26px;
+  height:2px;
+  background:var(--white);
+  transition:.4s;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+  .nav-links{
+    position:absolute;
+    top:80px;
+    right:6%;
+    background:var(--card);
+    flex-direction:column;
+    width:220px;
+    padding:25px;
+    border-radius:18px;
+    gap:18px;
+    display:none;
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 10%;
+}
+
+.hero h2{
+  font-family:'Playfair Display',serif;
+  font-size:4rem;
+  line-height:1.2;
+}
+
+.hero span{color:var(--accent)}
+
+.hero p{
+  max-width:520px;
+  margin:30px 0 40px;
+  color:var(--muted);
+}
+
+.hero a{
+  padding:14px 38px;
+  border:1px solid var(--accent);
+  border-radius:40px;
+  color:var(--accent);
+  text-decoration:none;
+  transition:.4s;
+}
+
+.hero a:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+/* SECTIONS */
+section{padding:120px 10%}
+
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  margin-bottom:60px;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+.project{
+  background:var(--card);
+  padding:40px;
+  border-radius:22px;
+  transition:.5s;
+}
+
+.project:hover{
+  transform:translateY(-12px);
+}
+
+.project h3{margin-bottom:15px}
+
+.project p{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.project a{
+  display:inline-block;
+  margin-top:22px;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.skill{
+  padding:10px 24px;
+  border-radius:30px;
+  background:var(--card);
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+/* CONTACT */
+.contact p{
+  color:var(--muted);
+  margin-bottom:12px;
+}
+
+.contact a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h2{font-size:2.6rem}
+  section{padding:90px 6%}
+}
+/*START OF CONTACT SECTION STYLE*/
+/* CONTACT SECTION */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.contact-info p{
+  font-size:1rem;
+  color:var(--muted);
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.contact-info i{
+  color:var(--accent);
+  font-size:1.1rem;
+}
+
+.contact-info a{
+  color:var(--white);
+  text-decoration:none;
+}
+
+.contact-info a:hover{
+  color:var(--accent);
+}
+
+.contact-note{
+  margin-top:30px;
+  font-size:.95rem;
+  max-width:420px;
+}
+
+/* FORM */
+.contact-form{
+  background:var(--card);
+  padding:40px;
+  border-radius:22px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.15);
+  padding:14px 16px;
+  border-radius:12px;
+  color:var(--white);
+  font-size:.95rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+}
+
+.contact-form button{
+  margin-top:10px;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:var(--accent);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.contact-form button:hover{
+  opacity:.85;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+/*ENDED OF CONTACT SECTION STYLE*/
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <h1>McOwino</h1>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#skills">Expertise</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h2>Designing <span>Digital Excellence</span><br>With Precision & Taste</h2>
+    <p>
+      I’m a web developer and digital architect crafting refined,
+      high-impact web experiences for institutions and ambitious brands.
+    </p>
+    <a href="#work">View Selected Work</a>
+  </div>
+</section>
+
+<section id="work">
+  <h2 class="section-title">Selected Work</h2>
+  <div class="projects">
+
+    <div class="project">
+      <h3>Chick Age Tracker</h3>
+      <p>Enterprise poultry management system with analytics and reporting.</p>
+      <a href="#">Explore →</a>
+    </div>
+
+    <div class="project">
+      <h3>Edutech Insights</h3>
+      <p>Premium education & technology services platform.</p>
+      <a href="#">Explore →</a>
+    </div>
+
+    <div class="project">
+      <h3>Institutional Websites</h3>
+      <p>High-credibility websites for hospitals and schools.</p>
+      <a href="#">Explore →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Expertise</h2>
+  <div class="skills">
+    <div class="skill">UI/UX Engineering</div>
+    <div class="skill">Modern Web Architecture</div>
+    <div class="skill">HTML • CSS • JavaScript</div>
+    <div class="skill">Google Sheets as CMS</div>
+    <div class="skill">Payment Integrations</div>
+    <div class="skill">SEO & Performance</div>
+  </div>
+</section>
+<!--Start of disabled(inactive) contact section-->
+<!--
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>Email: <a href="mailto:mcowino@gmail.com">mcowino@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/mcowino" target="_blank">github.com/mcowino</a></p>
+</section>
+-->
+<!--End of disabled (inactive)contact section-->
+
+<!--Improved contact section-->
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p>
+        <i class="fab fa-whatsapp"></i>
+        <a href="#" target="_blank">+2547123456789</a>
+      </p> 
+      
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:mc.owino254@gmail.com">mcowino@gmail.com</a>
+      </p>
+
+      <p>
+        <i class="fab fa-github"></i>
+        <a href="#" target="_blank">McOwino20</a>
+      </p>
+
+      <p class="contact-note">
+        Available for collaborations, institutional projects, and high-impact digital work.
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="number" placeholder="Your Phone Number" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+<!--Improved contact section end-->
+
+<footer>
+  © 2025 Mc Owino — Digital Architect
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+const navbar = document.querySelector(".navbar");
+const themeToggle = document.getElementById("themeToggle");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+});
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("shrink", window.scrollY > 80);
+});
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  themeToggle.innerHTML = document.body.classList.contains("light")
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
+});
+</script>
+
+</body>
+</html>
