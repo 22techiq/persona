@@ -491,11 +491,20 @@ footer{
     </div>
 
     <!-- Contact Form -->
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="number" placeholder="Your Phone Number" required />
-      <textarea placeholder="Your Message" rows="5" required></textarea>
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+         <!-- Web3Forms Access Key -->
+     <input type="hidden" name="access_key" value="d65e4f69-9c76-47e7-bf01-a6415455d73d">
+
+      <!-- Optional: Email subject -->
+      <input type="hidden" name="subject" value="New Contact Form Submission">
+
+      <!-- Optional: Redirect after submit -->
+      <input type="hidden" name="redirect" value="https://persona-alpha-sand.vercel.app/thanks.html">    
+      
+      <input type="text" name="Your Name" placeholder="Your Name" required />
+      <input type="email" name="Your Email" placeholder="Your Email" required />
+      <input type="number" name="Phone Number"  placeholder="Your Phone Number" required />
+      <textarea placeholder="Your Message" name="Client's Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
