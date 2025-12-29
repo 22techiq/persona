@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Institutional Websites — Mc Owino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0b0b0e;
+  --card:#121217;
+  --accent:#c9a45c;
+  --text:#f4f4f5;
+  --muted:#a1a1aa;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  padding:90px 10% 70px;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+  font-weight:600;
+}
+header p{
+  max-width:720px;
+  margin-top:18px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* CONTAINER */
+.container{
+  padding:0 10% 120px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  margin:90px 0 45px;
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  position:relative;
+}
+.section-title::before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-12px;
+  width:60px;
+  height:2px;
+  background:var(--accent);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:22px;
+  padding:36px;
+  position:relative;
+  transition:.5s;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,var(--accent),transparent);
+  opacity:0;
+  transition:.5s;
+}
+.card:hover::after{opacity:.12}
+.card:hover{transform:translateY(-10px)}
+
+.card h3{
+  font-size:1.35rem;
+  margin-bottom:10px;
+}
+.meta{
+  font-size:.85rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.description{
+  font-size:.95rem;
+  color:var(--muted);
+  margin-bottom:22px;
+}
+
+/* FEATURES */
+.features span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border:1px solid rgba(201,164,92,.25);
+  padding:7px 12px;
+  border-radius:30px;
+  font-size:.8rem;
+  margin:5px 5px 0 0;
+  color:var(--accent);
+}
+
+/* ACTIONS */
+.actions{
+  margin-top:26px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.actions a{
+  text-decoration:none;
+  font-size:.85rem;
+  padding:10px 22px;
+  border-radius:30px;
+  transition:.4s;
+}
+
+.view{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+.view:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+.source{
+  border:1px solid rgba(201,164,92,.35);
+  color:var(--muted);
+}
+.source:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(201,164,92,.08);
+}
+
+.secondary{
+  color:var(--muted);
+}
+.secondary:hover{
+  color:var(--text);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:50px;
+  color:var(--muted);
+  font-size:.85rem;
+  border-top:1px solid #1f1f25;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:70px 6% 50px}
+  .container{padding:0 6% 90px}
+  header h1{font-size:2.4rem}
+}
+.footer-socials a{
+  color:var(--muted);
+  margin:0 12px;
+  font-size:1.25rem;
+  transition:.4s;
+}
+.footer-socials a:hover{
+  color:var(--accent);
+  transform:translateY(-3px);
+}
+/*WhatsApp floating button*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.whatsapp-float {
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Institutional Websites</h1>
+  <p>
+    Public-facing digital platforms crafted for schools, hospitals,
+    NGOs, and organizations—designed to communicate trust, authority,
+    and operational clarity.
+  </p>
+</header>
+
+<div class="container">
+
+<!-- SCHOOL WEBSITES -->
+<h2 class="section-title">School Websites</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>Green Valley Public School</h3>
+    <div class="meta">School Platform • 2024</div>
+    <p class="description">
+      Comprehensive academic website featuring online admissions,
+      student access, parent communication, notices, and results.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-file-signature"></i> Admissions</span>
+      <span><i class="fa-solid fa-user-graduate"></i> Students</span>
+      <span><i class="fa-solid fa-users"></i> Parents</span>
+      <span><i class="fa-solid fa-chart-line"></i> Results</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="secondary">Documentation</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Sunrise International School</h3>
+    <div class="meta">Academic Website • 2023</div>
+    <p class="description">
+      Modern institutional website highlighting faculty, events,
+      curriculum, announcements, and school culture.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-chalkboard-teacher"></i> Faculty</span>
+      <span><i class="fa-solid fa-calendar-days"></i> Events</span>
+      <span><i class="fa-solid fa-images"></i> Gallery</span>
+      <span><i class="fa-solid fa-bullhorn"></i> Notices</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="secondary">Documentation</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- HOSPITAL WEBSITES -->
+<h2 class="section-title">Hospital & Clinic Websites</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>City Care Multispeciality Hospital</h3>
+    <div class="meta">Hospital Platform • 2024</div>
+    <p class="description">
+      Professional hospital website with appointment booking,
+      doctor profiles, departments, and patient access tools.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-calendar-check"></i> Appointments</span>
+      <span><i class="fa-solid fa-user-doctor"></i> Doctors</span>
+      <span><i class="fa-solid fa-hospital-user"></i> Patients</span>
+      <span><i class="fa-solid fa-building"></i> Departments</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="secondary">Documentation</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>LifeLine Clinic</h3>
+    <div class="meta">Clinic Website • 2023</div>
+    <p class="description">
+      Clinic-focused website optimized for fast access to services,
+      doctor availability, emergency contacts, and appointments.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-phone-volume"></i> Emergency</span>
+      <span><i class="fa-solid fa-clock"></i> Availability</span>
+      <span><i class="fa-solid fa-notes-medical"></i> Services</span>
+      <span><i class="fa-solid fa-stethoscope"></i> Doctors</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="secondary">Documentation</a>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<footer>
+  <div class="footer-socials">
+  <a href="https://github.com/mcowino20" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+<a href="https://wa.me/254742955188"
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+  
+  © 2025 Mc Owino — Digital Architect
+</footer>
+
+</body>
+</html>se
