@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Web Applications — Mc Owino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="Web Applications by Mc Owino — scalable, data-driven systems and dashboards." />
+<meta name="author" content="Mc Owino" />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0b0b0e;
+  --card:#121217;
+  --muted:#a1a1aa;
+  --accent:#c9a45c;
+  --white:#f4f4f5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  padding:110px 10% 70px;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+  font-weight:600;
+}
+header p{
+  max-width:620px;
+  color:var(--muted);
+  margin-top:18px;
+  font-size:1.05rem;
+}
+
+/* CONTAINER */
+.container{
+  padding:0 10% 120px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:22px;
+  padding:38px;
+  position:relative;
+  transition:.5s;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,var(--accent),transparent);
+  opacity:0;
+  transition:.5s;
+}
+.card:hover::after{opacity:.12}
+.card:hover{transform:translateY(-12px)}
+
+.card h3{
+  font-size:1.5rem;
+  margin-bottom:10px;
+}
+.meta{
+  color:var(--muted);
+  font-size:.85rem;
+  margin-bottom:18px;
+}
+.description{
+  color:var(--muted);
+  font-size:.95rem;
+  margin-bottom:22px;
+}
+
+/* FEATURES */
+.features span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#0f0f14;
+  color:var(--muted);
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:.85rem;
+  margin:6px 6px 0 0;
+}
+.features i{color:var(--accent)}
+
+/* ACTIONS */
+.actions{
+  margin-top:28px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.actions a{
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:.9rem;
+  transition:.4s;
+}
+
+.view{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+.view:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+.source{
+  border:1px solid rgba(201,164,92,.35);
+  color:var(--muted);
+}
+.source:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(201,164,92,.08);
+}
+
+.docs{
+  color:var(--muted);
+}
+.docs:hover{color:var(--white)}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:60px 20px;
+  border-top:1px solid #1f1f25;
+}
+.footer-socials{
+  margin-bottom:18px;
+}
+.footer-socials a{
+  color:var(--muted);
+  margin:0 12px;
+  font-size:1.3rem;
+  transition:.4s;
+}
+.footer-socials a:hover{
+  color:var(--accent);
+  transform:translateY(-3px);
+}
+footer p{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:90px 6% 50px}
+  header h1{font-size:2.4rem}
+  .container{padding:0 6% 90px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Web Applications</h1>
+  <p>
+    Custom-built systems focused on automation, data intelligence,
+    dashboards, and scalable digital workflows.
+  </p>
+</header>
+
+<div class="container">
+
+<h2 class="section-title">Selected Applications</h2>
+
+<div class="grid">
+
+  <!-- APP 1 -->
+  <div class="card">
+    <h3>Chick Age Tracker</h3>
+    <div class="meta">Management System • 2025</div>
+    <p class="description">
+      Poultry management web application with batch tracking,
+      sales analytics, income reports, and growth insights.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-chart-line"></i> Analytics</span>
+      <span><i class="fa-solid fa-database"></i> Data Management</span>
+      <span><i class="fa-solid fa-clock"></i> Age Tracking</span>
+      <span><i class="fa-solid fa-file-invoice"></i> Reports</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="docs">Documentation</a>
+    </div>
+  </div>
+
+  <!-- APP 2 -->
+  <div class="card">
+    <h3>Ultimate Translator</h3>
+    <div class="meta">Utility Web App • 2024</div>
+    <p class="description">
+      Advanced translation web tool with clipboard integration,
+      multi-language support, and clean user experience.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-language"></i> Multi-Language</span>
+      <span><i class="fa-solid fa-copy"></i> Clipboard</span>
+      <span><i class="fa-solid fa-bolt"></i> Fast Processing</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="docs">Documentation</a>
+    </div>
+  </div>
+
+  <!-- APP 3 -->
+  <div class="card">
+    <h3>Student Resource Portal</h3>
+    <div class="meta">EdTech Application • 2024</div>
+    <p class="description">
+      Resource management platform with authentication,
+      role-based access, and Google Sheets as CMS.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-user-shield"></i> Access Control</span>
+      <span><i class="fa-solid fa-sheet-plastic"></i> Sheets CMS</span>
+      <span><i class="fa-solid fa-cloud"></i> Cloud Based</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+      <a href="#" class="docs">Documentation</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  <div class="footer-socials">
+    <a href="https://github.com/mcowino20" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
+  <p>© 2025 Mc Owino — Digital Architect</p>
+</footer>
+
+</body>
+</html>
