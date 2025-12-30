@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+
+<title>Payment API Integrations — Mc Owino</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0b0b0e;
+  --card:#121217;
+  --accent:#c9a45c;
+  --text:#f4f4f5;
+  --muted:#a1a1aa;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:radial-gradient(circle at top,#151520,#0b0b0e 60%);
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  padding:20px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:60px auto;
+  padding:50px;
+  background:rgba(18,18,23,.9);
+  backdrop-filter:blur(18px);
+  border-radius:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+  position:relative;
+}
+
+/* BACK HOME */
+.back-home{
+  display:inline-block;
+  margin-bottom:30px;
+  padding:8px 18px;
+  border-radius:20px;
+  background:rgba(201,164,92,.2);
+  color:var(--accent);
+  text-decoration:none;
+  font-size:.85rem;
+  border:1px solid rgba(201,164,92,.3);
+}
+.back-home:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-bottom:50px;
+}
+.header h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.1rem,4vw,3rem);
+  margin-bottom:16px;
+}
+.header span{color:var(--accent)}
+.header p{
+  max-width:680px;
+  margin:auto;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* CTA */
+.cta{
+  margin:40px 0;
+  padding:22px;
+  border-radius:18px;
+  text-align:center;
+  background:linear-gradient(120deg,rgba(201,164,92,.15),transparent);
+  border:1px solid rgba(201,164,92,.25);
+  font-weight:500;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  padding:30px;
+  border-radius:22px;
+  transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+.card h3{
+  font-size:1.35rem;
+  margin-bottom:10px;
+}
+.card p{
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* ACTIONS */
+.actions{
+  margin-top:22px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:11px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:500;
+  transition:.3s;
+}
+.view{
+  background:var(--accent);
+  color:#000;
+}
+.source{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+.view:hover,.source:hover{
+  opacity:.85;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.socials a{
+  color:var(--muted);
+  margin-left:18px;
+  font-size:1.2rem;
+}
+.socials a:hover{color:var(--accent)}
+
+@media(max-width:768px){
+  .container{padding:30px}
+  .actions{flex-direction:column}
+  .btn{width:100%;text-align:center}
+  .footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back-home">← Back Home</a>
+
+<div class="header">
+  <h1>Payment API <span>Integrations</span></h1>
+  <p>
+    Real-world payment workflows built with secure APIs,
+    verified callbacks, and production-grade reliability.
+  </p>
+</div>
+
+<div class="cta">
+  Live payment integrations — test actual transaction flows below.
+</div>
+
+<div class="grid">
+
+  <!-- Donation Integration -->
+  <div class="card">
+    <h3>Donation Payment Flow</h3>
+    <p>
+      IntaSend-powered donation system with secure checkout,
+      callback verification and transaction confirmation.
+    </p>
+    <div class="actions">
+      <a href="#"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn view">
+         Test Integration
+      </a>
+      <a href="#"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn source">
+         Source Code
+      </a>
+    </div>
+  </div>
+
+  <!-- Order Integration -->
+  <div class="card">
+    <h3>Order & Service Payments</h3>
+    <p>
+      Order-based payment workflow featuring validation,
+      status handling, and automated confirmations.
+    </p>
+    <div class="actions">
+      <a href="#"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn view">
+         Test Integration
+      </a>
+      <a href="#"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn source">
+         Source Code
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>© 2025 Mc Owino — Digital Architect</div>
+  <div class="socials">
+    <a href="https://github.com/mcowino20" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
