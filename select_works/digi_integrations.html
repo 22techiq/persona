@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Digital Systems & Integrations — Mc Owino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="Payment APIs, form pipelines, and system integrations by Mc Owino." />
+<meta name="author" content="Mc Owino" />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0b0b0e;
+  --card:#121217;
+  --muted:#a1a1aa;
+  --accent:#c9a45c;
+  --white:#f4f4f5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  padding:110px 10% 70px;
+}
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+}
+header p{
+  max-width:700px;
+  color:var(--muted);
+  margin-top:18px;
+}
+
+/* CONTAINER */
+.container{
+  padding:0 10% 120px;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:22px;
+  padding:38px;
+  position:relative;
+  transition:.5s;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,var(--accent),transparent);
+  opacity:0;
+  transition:.5s;
+}
+.card:hover::after{opacity:.12}
+.card:hover{transform:translateY(-12px)}
+
+.card h3{
+  font-size:1.5rem;
+  margin-bottom:10px;
+}
+.meta{
+  font-size:.85rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.description{
+  color:var(--muted);
+  font-size:.95rem;
+  margin-bottom:22px;
+}
+
+/* FEATURES */
+.features span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#0f0f14;
+  color:var(--muted);
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:.85rem;
+  margin:6px 6px 0 0;
+}
+.features i{color:var(--accent)}
+
+/* ACTIONS */
+.actions{
+  margin-top:28px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.actions a{
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:.9rem;
+  transition:.4s;
+}
+.view{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+.view:hover{background:var(--accent);color:#000}
+.source{
+  border:1px solid rgba(201,164,92,.35);
+  color:var(--muted);
+}
+.source:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(201,164,92,.08);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:60px 20px;
+  border-top:1px solid #1f1f25;
+}
+.footer-socials a{
+  color:var(--muted);
+  margin:0 12px;
+  font-size:1.3rem;
+  transition:.4s;
+}
+.footer-socials a:hover{
+  color:var(--accent);
+  transform:translateY(-3px);
+}
+footer p{
+  margin-top:18px;
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:90px 6% 50px}
+  header h1{font-size:2.4rem}
+  .container{padding:0 6% 90px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Digital Systems & Integrations</h1>
+  <p>
+    Real-world projects showcasing secure payment APIs,
+    form pipelines, and automation systems powering modern web platforms.
+  </p>
+</header>
+
+<div class="container">
+<h2 class="section-title">Selected Integration Projects</h2>
+
+<div class="grid">
+
+  <!-- PROJECT 1 -->
+  <div class="card">
+    <h3>Service Payment System</h3>
+    <div class="meta">Payment API Integration • IntaSend</div>
+    <p class="description">
+      Integrated IntaSend payment gateway for service-based platforms,
+      enabling secure checkout, callbacks, and transaction tracking.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-credit-card"></i> IntaSend API</span>
+      <span><i class="fa-solid fa-bell"></i> Payment Callbacks</span>
+      <span><i class="fa-solid fa-receipt"></i> Transaction Logs</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="card">
+    <h3>Website Contact & Lead System</h3>
+    <div class="meta">Form Integration • Web3Forms</div>
+    <p class="description">
+      Serverless contact form system that securely routes submissions
+      to email and stores leads without backend infrastructure.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-paper-plane"></i> Web3Forms</span>
+      <span><i class="fa-solid fa-envelope"></i> Email Routing</span>
+      <span><i class="fa-solid fa-shield"></i> Spam Protection</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="card">
+    <h3>Google Sheets Data Pipeline</h3>
+    <div class="meta">Automation System • Google Apps Script</div>
+    <p class="description">
+      Data capture and retrieval system using Google Sheets as a backend,
+      powering websites, dashboards, and internal tools.
+    </p>
+    <div class="features">
+      <span><i class="fa-solid fa-sheet-plastic"></i> Sheets CMS</span>
+      <span><i class="fa-solid fa-database"></i> Data API</span>
+      <span><i class="fa-solid fa-gear"></i> Automation</span>
+    </div>
+    <div class="actions">
+      <a href="#" class="view">Live Preview</a>
+      <a href="#" class="source">Source Code</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  <div class="footer-socials">
+    <a href="https://github.com/mcowino20" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
+  <p>© 2025 Mc Owino — Digital Architect</p>
+</footer>
+
+</body>
+</html>
