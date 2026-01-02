@@ -160,40 +160,43 @@ form{display:grid;gap:28px}
   <form action="https://api.web3forms.com/submit" method="POST">
    <!-- Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="d65e4f69-9c76-47e7-bf01-a6415455d73d">
+      <!-- Optional: Redirect after submit -->
+  <input type="hidden" name="redirect" value="https://persona-alpha-sand.vercel.app/thanks.html">    
+      
     <!-- CONTACT INFORMATION -->
     <div class="section-title">Contact Information</div>
 
     <div class="grid">
       <div class="group">
         <label>Full Name</label>
-        <input type="text" placeholder="Your full name" required>
+        <input type="text" placeholder="Your full name" name="Client Full Name"required>
       </div>
       <div class="group">
         <label>Email Address</label>
-        <input type="email" placeholder="you@example.com" required>
+        <input type="email" placeholder="you@example.com" name="Client Email Address"required>
       </div>
     </div>
 
     <div class="grid">
       <div class="group">
         <label>Phone Number (WhatsApp preferred)</label>
-        <input type="tel" placeholder="+254..." required>
+        <input type="tel" placeholder="+254..." name="Client's Phone Number"required>
       </div>
       <div class="group">
         <label>Country / Location</label>
-        <input type="text" placeholder="Kenya / USA / UK">
+        <input type="text" placeholder="Kenya / USA / UK" name ="Country of Origin">
       </div>
     </div>
 
     <div class="group">
       <label>Company / Organization (Optional)</label>
-      <input type="text" placeholder="Business or institution name">
+      <input type="text" placeholder="Business or institution name" name="Business or Institution Name">
     </div>
 
     <div class="group">
       <label>Preferred Contact Method</label>
       <select required>
-        <option value="">Select contact method</option>
+        <option value="" name="Prefered Contact Method">Select contact method</option>
         <option>Email</option>
         <option>WhatsApp</option>
         <option>Phone Call</option>
@@ -206,7 +209,7 @@ form{display:grid;gap:28px}
     <div class="group">
       <label>Select Project / Source Code</label>
       <select required>
-        <option value="">Choose a project</option>
+        <option value="" name="Selected Source Code">Choose a project</option>
         <option>Payment API Integration (IntaSend)</option>
         <option>Institutional Website</option>
         <option>Web Application</option>
@@ -217,13 +220,13 @@ form{display:grid;gap:28px}
 
     <div class="group">
       <label>Special Instructions</label>
-      <textarea placeholder="Customization needs, framework preference, deployment requirements, or notes..."></textarea>
+      <textarea placeholder="Customization needs, framework preference, deployment requirements, or notes..." name="Customization Needs"></textarea>
     </div>
 
     <div class="group">
       <label>Preferred Delivery Method</label>
       <select required>
-        <option value="">Select delivery method</option>
+        <option value="" name="Prefered Mode of Delivery" >Select delivery method</option>
         <option>GitHub Private Repository</option>
         <option>Downloadable ZIP File</option>
         <option>Email Delivery</option>
